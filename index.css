@@ -7,9 +7,13 @@ h1 {
     height: 100%;
     border: solid black 2px;
     column-count: 3;
+    display: grid;
 }
 
 .inputBox {
-    max-width: 30px;
     border: solid black 1px;
+}
+
+.calButton {
+    background-color: cornflowerblue;
 }
