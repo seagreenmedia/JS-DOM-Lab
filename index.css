@@ -1,5 +1,7 @@
 h1 {
     text-align: center;
+    font: bold;
+    padding: 2%;
 }
 
 .box {
@@ -10,10 +12,36 @@ h1 {
     display: grid;
 }
 
+.startingTemp {
+    background-color: rgb(28, 32, 36);
+    width: 100%;
+    height: 100%;
+    outline: rgb(18, 40, 63);
+    font-size: xx-large;
+    color: whitesmoke;
+    text-align: center;
+    border: 0;
+}
+
 .inputBox {
     border: solid black 1px;
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+.outputBox {
+    border: solid black 1px;
+    padding: 10%;
 }
 
 .calButton {
     background-color: cornflowerblue;
+    width: 100%;
+    height: 100%;
+    outline: rgb(18, 40, 63);
+    font-size: xx-large;
+    color: whitesmoke;
+    text-align: center;
+    border: 0;
 }
