@@ -10,54 +10,56 @@
 
 <body>
     <div class="box">
-        <div>
+        <form id="convertorForm" method="post" name="convertorForm" onsubmit="temperatureConversion.calculate()">
             <h1>Tempurature Scale Converter</h1>
-        </div>
-        <div class="container" id="box">
+            <div class="container" id="box">
 
-            <div class="row" style="align-content: center;">
-                <div class="col-md-3">
-                    <select name="Starting Temperature" id="startingTemp" class="startingTemp">
-                        <option value="fahrenheit">Fahrenheit</option>
-                        <option value="celsius">Celsius</option>
-                        <option value="kelvin">Kelvin</option>
-                        <option value="rankine">Rankine</option>
-                    </select>
+                <div class="row">
+                    <div class="col-md-4">
+                        <select name="Starting Temperature" id="startingTemp" class="startingTemp">
+                            <option value="" disabled selected>Measurement</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="rankine">Rankine</option>
+                        </select>
+                    </div>
+                    <div style="float: right;" class="userInput col-md-4">
+                        <input class="inputBox" id="conversionValue" name="conversionValue" type="number" placeholder="Temperature">
+                    </div>
+                    <div class="col-md-4">
+
+                        <button class="calButton" id="calButton" type="button" value="calculate" onclick="temperatureConversion.calculate()">Calculate</button>
+                    </div>
                 </div>
-                <div style="float: right;" class="userInput col-md-3">
-                    <input class="inputBox" id="conversionValue" name="conversionValue" type="number" placeholder="Temperature">
-                </div>
-                <div class="col-md-3 ">
-                    <button class="calButton " id="calButton " type="button " value="calculate " onclick="calculate() ">Calculate</button>
+
+                <div class="row" id="outputBox" style="padding: 2%;">
+                    <div class="col-md-3 container">
+                        <span><strong>Fahrenheit</strong></span>
+                        <br>
+                        <span id="fahrenheit"></span>
+                    </div>
+                    <div class="col-md-3 container">
+                        <span><strong>Celsius</strong></span>
+                        <br>
+                        <span id="celsius"></span>
+                    </div>
+                    <div class="col-md-3 container">
+                        <span><strong>Kelvin</strong></span>
+                        <br>
+                        <span id="kelvin"></span>
+                    </div>
+                    <div class="col-md-3 container">
+                        <span><strong>Rankine</strong></span>
+                        <br>
+                        <span id="rankine"></span>
+                    </div>
                 </div>
             </div>
-
-            <div class="row " id="outputBox ">
-                <div class="col-md-3 container ">
-                    <span><strong>Fahrenheit</strong></span>
-                    <br>
-                    <span id="fahrenheit "></span>
-                </div>
-                <div class="col-md-3 container ">
-                    <span><strong>Celsius</strong></span>
-                    <br>
-                    <span id="celsius "></span>
-                </div>
-                <div class="col-md-3 container ">
-                    <span><strong>Kelvin</strong></span>
-                    <br>
-                    <span id="kelvin "></span>
-                </div>
-                <div class="col-md-3 container ">
-                    <span><strong>Rankine</strong></span>
-                    <br>
-                    <span id="rankine "></span>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW " crossorigin="anonymous "></script>
-    <script src="index.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous "></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
